@@ -33,7 +33,6 @@ class Model(nn.Module):
         self.use_cuda = args.cuda
         self.m = data.m
         self.w = data.w
-        self.num_layers = args.num_layers;
         
         x = self.w;
         self.linears = []
