@@ -1,0 +1,154 @@
+\documentclass[sigconf]{acmart}
+
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{multirow}
+\usepackage{booktabs}
+\usepackage{grffile}
+\usepackage{color}
+%\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\usepackage{xspace}
+\usepackage{multirow}
+\usepackage{hyperref}
+\usepackage{subcaption}
+
+% comments
+\newcommand{\yiming}[1]{\textbf{\textcolor{red}{Yiming: #1}}}
+\newcommand{\guokun}[1]{\textbf{\textcolor{blue}{Guokun: #1}}}
+\newcommand{\peter}[1]{\textbf{\textcolor{violet}{Peter: #1}}}
+\newcommand{\hanxiao}[1]{\textbf{\textcolor{green}{Hanxiao: #1}}}
+
+% data sets
+\def\electricity{{\sf Electricity}\xspace}
+\def\traffic{{\sf Traffic}\xspace}
+\def\wind{{\sf Wind}\xspace}
+\def\temp{{\sf Temperature}\xspace}
+\def\solar{{\sf Solar-Energy}\xspace}
+\def\lisf{{\sf LISF}\xspace}
+\def\exchange{{\sf Exchange-Rate}\xspace}
+\def\stock{{\sf S\&P 500}\xspace}
+\def\co{{\sf Gas-CO}\xspace}
+\def\methane{{\sf Gas-Methane}\xspace}
+
+% baseline methods
+\def\VAR{{\sf VAR}\xspace}
+\def\VARMLP{{\sf VAR-MLP}\xspace}
+\def\LRidge{{\sf LRidge}\xspace}
+\def\LSVR{{\sf LSVR}\xspace}
+\def\GP{{\sf GP}\xspace}
+\def\TRMF{{\sf TRMF}\xspace}
+\def\AR{{\sf AR}\xspace}
+
+\newcommand{\argmin}{\mathop{\mathrm{argmin}}}
+\newcommand{\argmax}{\mathop{\mathrm{argmax}}}
+\newcommand{\minimize}{\mathop{\mathrm{minimize}}}
+\newcommand{\maximize}{\mathop{\mathrm{maximize}}}
+\newcommand{\st}{\mathop{\mathrm{subject\,\,to}}}
+
+% shortcuts for symbols
+\def\bc{{\boldsymbol c}}
+\def\bg{{\boldsymbol g}}
+\def\boldf{{\boldsymbol f}}
+\def\bq{{\boldsymbol q}}
+\def\bu{{\boldsymbol u}}
+\def\bv{{\boldsymbol v}}
+\def\bw{{\boldsymbol w}}
+\def\bx{{\boldsymbol x}}
+\def\by{{\boldsymbol y}}
+\def\bz{{\boldsymbol z}}
+\def\bD{{\boldsymbol D}}
+\def\bK{{\boldsymbol K}}
+\def\bW{{\boldsymbol W}}
+\def\bX{{\boldsymbol X}}
+\def\bY{{\boldsymbol Y}}
+\def\bZ{{\boldsymbol Z}}
+
+\def\R{{\mathbb{R}}}
+
+% Copyright
+%\setcopyright{acmcopyright}
+%\setcopyright{acmlicensed}
+\setcopyright{rightsretained}
+%\setcopyright{usgov}
+%\setcopyright{usgovmixed}
+%\setcopyright{cagov}
+%\setcopyright{cagovmixed}
+
+
+% DOI
+\acmDOI{10.475/123_4}
+
+% ISBN
+\acmISBN{123-4567-24-567/08/06}
+
+%Conference
+\acmConference[CIKM'17]{CIKM}{November 2017}{Singapore} 
+
+\acmYear{2017}
+\copyrightyear{2017}
+
+\acmPrice{15.00}
+
+\begin{document}
+\title{Modeling Long- and Short-Term Temporal Patterns with Deep Neural Networks}
+
+
+\iffalse
+\author{Guokun Lai}
+\affiliation{%
+  \institution{Carnegie Mellon University}
+}
+\email{guokun@cs.cmu.edu}
+
+\author{Wei-Cheng Chang}
+\affiliation{%
+  \institution{Carnegie Mellon University}
+}
+\email{wchang2@andrew.cmu.edu}
+
+\author{Yiming Yang}
+\affiliation{%
+  \institution{Carnegie Mellon University}
+}
+\email{yiming@cs.cmu.edu}
+
+\author{Hanxiao Liu}
+\affiliation{%
+  \institution{Carnegie Mellon University}
+}
+\email{hanxiaol@cs.cmu.edu}
+
+\fi
+\begin{abstract}
+Multivariate time series forecasting is an important machine learning problem across many domains, including predictions of solar plant energy output, electricity consumption, and traffic jam situation. Temporal data arise in these real-world applications often involves a mixture of long-term and short-term patterns, for which traditional approaches such as Autoregressive models and Gaussian Process may fail. In this paper, we proposed a novel deep learning framework, namely Long- and Short-term Time-series network (LSTNet), to address this open challenge. LSTNet uses the Convolution Neural Network (CNN) to extract short-term local dependency patterns among variables, and the Recurrent Neural Network (RNN) to discover long-term patterns and trends. In our evaluation on real-world data with complex mixtures of repetitive patterns, LSTNet achieved significant performance improvements over that of several state-of-the-art baseline methods.
+
+%Our experiment demonstrates that we assemble the above three parts efficiently, and our model significantly outperform the state-of-art models.
+\end{abstract}
+
+\keywords{Multivariate Time Series, CNN, RNN, Autoregressive models}
+
+\maketitle
+
+\input{src/introduction}
+\input{src/related}
+\input{src/framework}
+\input{src/experiment}
+\input{src/conclusion}
+%
+% The following two commands are all you need in the
+% initial runs of your .tex file to
+% produce the bibliography for the citations in your paper.
+\bibliographystyle{abbrv}
+\bibliography{sigproc}  % sigproc.bib is the name of the Bibliography in this case
+% You must have a proper ".bib" file
+%  and remember to run:
+% latex bibtex latex latex
+% to resolve all references
+%
+% ACM needs 'a single self-contained file'!
+%
+%APPENDICES are optional
+%\balancecolumns
+
+\end{document}

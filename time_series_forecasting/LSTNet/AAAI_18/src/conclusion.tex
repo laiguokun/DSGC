@@ -1,0 +1,8 @@
+\section{Conclusion}
+\label{sec:conclusion}
+%\pagebreak
+In this paper, we presented a novel deep learning framework (LSTNet) for the task of multivariate time series forecasting. By combining the strengths of convolutional and recurrent neural networks and an autoregressive component, the proposed approach significantly improved the state-of-the-art results in time series forecasting on multiple benchmark datasets. With in-depth analysis and empirical evidence we show that LSTNet indeed successfully captures both short-term and long-term repeating patterns in data, and combines both linear and non-linear models for robust prediction.  
+
+For future research, there are several promising directions in extending the work. Firstly, the skip length $p$ of the skip-recurrent layer is a crucial hyper-parameter. Currently, we manually tune it based on the validation dataset. How to automatically choose $p$ according to data is an interesting problem. Secondly, in the convolution layer we treat each variable dimension equally, but in the real world dataset, we usually have rich attribute information. Integrating them into the LSTNet model is another challenging problem.  
+%\yiming{Hanxiao: Can you add somethings here?}
+%However, there are some challenges need to tackle in the future, e.g how to improve the prediction accuracy of the datasets without noticeable recurring patterns by utilizing the deep learning tools, which are prevalent in the economic activities. 
