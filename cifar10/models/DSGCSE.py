@@ -81,6 +81,7 @@ class Model(nn.Module):
             if (pool_list[i] != -1):
                 pool_id = pool_list[i]
                 x = self.pooling_layers[pool_id](x, self.index_list[pool_id]);
+                x = self.dropout(x);
         x = x.view(batch_size, last_layer * cfgs[-1]);
         x = F.relu(self.fc1(x))
         x = self.dropout(x);
