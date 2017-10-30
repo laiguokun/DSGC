@@ -1,12 +1,12 @@
-#DSGC (Depthwise Separable Graph Convoluiton)
+# DSGC (Depthwise Separable Graph Convoluiton)
 
 This repo contains the experiment codes for the three experiments in the paper. Because the limitation of the space of Github. I include the data file in the website. 
 
-### File Structure 
+## File Structure 
 
 In each folder, the subfolder 'models/' contains the codes for all models mentioned in the papaer. 'sh/' contains several example scripts to run the program. 
 
-### Hyper-Parameter Setting
+## Hyper-Parameter Setting
 
 The model structure and hyper-parameters are encoded in the model files. Running the program with the default hyper-parameter, you should get the similar performance as the results in the paper. 
 
