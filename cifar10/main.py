@@ -9,7 +9,7 @@ import argparse
 import random
 import numpy as np;
 import timeit
-from models import GCN, ChebyNet, MoNet, VGG, Xception, SCNNDense, SCNNInce, SCNN, SCNNSE
+from models import GCN, ChebyNet, MoNet, VGG, Xception, DSGCDense, DSGCInce, DSGC, DSGCSE
 from utils import Data_utility;
     
 parser = argparse.ArgumentParser(description='PyTorch Time series forecasting')

@@ -4,7 +4,7 @@ import time
 
 import torch
 import torch.nn as nn
-from models import LSTNet, AR, VAR, GCN, ChebyNet, MoNet, SCNN
+from models import LSTNet, AR, VAR, GCN, ChebyNet, MoNet, DSGC
 import numpy as np;
 import importlib
 from utils import *;

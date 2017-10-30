@@ -1,2 +1,0 @@
-gpu=$1
-python -u main.py --epochs 200 --normalize 0 --dropout 0. --window 18 --seed 12345 --horizon 1 --gpu ${gpu} --data data/westernS.txt --loc data/westernS_loc.txt --embed 10 --nn_num 32 --adjacency 2d --model SCNN --num_layers 10 --hidCNN 100
